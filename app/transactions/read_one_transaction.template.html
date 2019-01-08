@@ -1,0 +1,45 @@
+<md-dialog>
+    <form ng-cloak>
+ 
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Read Transaction</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <md-input-container class="md-block">
+                    <label>ID</label> 
+                    <input ng-model="id" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>User</label>
+                    <input ng-model="user" disabled>
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Amount</label>
+                    <input ng-model="amount" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Currency</label>
+                    <input ng-model="currency" disabled>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Date</label>
+                    <input ng-model="txn_date | date:'dd-MMM-yyyy'" disabled>
+                </md-input-container>
+
+            </div>
+        </md-dialog-content>
+ 
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

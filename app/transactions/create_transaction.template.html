@@ -1,0 +1,46 @@
+<md-dialog>
+    <form ng-cloak>
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Create Transaction</h2>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+                <md-input-container class="md-block">
+                    <label>User</label>
+                    <input ng-model="user" type="email">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Amount</label>
+                    <input ng-model="amount" type="number">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Currency</label>
+                    <md-select ng-model="currency">
+                        <md-option value="EUR">EUR</md-option>
+                        <md-option value="GBP">GBP</md-option>
+                        <md-option value="INR">INR</md-option>
+                        <md-option value="USD">USD</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                    <label>Date</label>
+                    <md-datepicker ng-model="txn_date"></md-datepicker>
+                </md-input-container>
+
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+            <md-button ng-click="createTransaction()" class="md-primary">Create</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
